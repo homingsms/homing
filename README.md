@@ -6,9 +6,22 @@ Homing turns Android phones into an SMS gateway you control.
 
 Install the Homing app on an Android phone with a SIM card and your software can send SMS, data SMS and MMS through it with a simple HTTP API. Delivery reports and received messages come back to you as signed webhooks.
 
-You can run one phone on its own, with the API served by the phone over your local network. Or you can pair one or many phones with Homing Cloud, call `api.homingsms.com`, and manage the whole fleet from the Homing Cloud console.
+You can run one phone on its own, with the API served by the phone over your local network. Or you can pair one or many phones with Homing Cloud, call `api.homingsms.com`, and manage them from the Homing Cloud console.
 
 Both modes use the same request and response shapes, the same API key format and the same webhook signatures, so code written against one works with the other.
+
+## What Homing is for
+
+Homing is a developer tool for the messages your product sends to its own users and staff, from your own phone and SIM:
+
+- one-time codes and sign-in links for your own users
+- order, delivery, booking and appointment updates
+- alerts from your systems to your team
+- replies to people who texted you first
+
+It is not a bulk marketing service, and it is not for routing other people's traffic or international calls and messages around a carrier's network. If you need large campaigns, a registered sender ID or a short code, use a licensed SMS provider.
+
+You stay in control of, and responsible for, what you send: message only people who agreed to hear from you, honor opt-outs (Homing detects STOP-style replies and reports `opt_out.received`), and follow your carrier's terms and the messaging and privacy laws where you and your recipients are. Using Homing means accepting the [Terms of Service](https://homingsms.com/legal/terms), [Acceptable Use Policy](https://homingsms.com/legal/acceptable-use) and [Privacy Policy](https://homingsms.com/legal/privacy); the app and the console ask you to agree before you start.
 
 ## Quickstart in 60 seconds (local mode)
 
@@ -401,7 +414,7 @@ Pass the raw bytes, for example `request.get_data()` in Flask or `await request.
   ```
 
 - **OEM battery killers.** Many phones, especially Xiaomi, Samsung, Huawei, Tecno and Infinix, stop background apps aggressively. Exempt Homing from battery optimization, follow the phone-specific tips in onboarding, and keep the phone charging. The app reports a degraded state with the reason when something limits it.
-- **Throughput per SIM.** Each SIM sends at the pace its carrier and Android allow, and a long text is sent as several parts. To send more, add SIMs and phones and let Homing Cloud spread the load; a single SIM is not built for high-volume campaigns.
+- **Throughput per SIM.** Each SIM sends at the pace its carrier and Android allow, and a long text is sent as several parts. Several phones help with reliability and with each team or location sending from its own number, not with turning consumer SIMs into a bulk sending service; for campaigns, use a licensed SMS provider.
 - **Firebase is optional.** Without Firebase Cloud Messaging the phone still works in cloud mode, but it picks up new messages on its heartbeat and pull interval (60 seconds by default) instead of within a moment of the send.
 - **Local mode reachability.** The caller must reach the phone's address directly. Phones change IP addresses and the local API has no TLS, so use cloud mode for callers outside your network.
 
@@ -474,4 +487,4 @@ Set `NEXT_PUBLIC_API_MODE=mock` to run on sample data without a backend. Before 
 
 ## License
 
-The Android app is licensed under the Apache License 2.0; see `android/LICENSE`.
+The Android app is licensed under the Apache License 2.0; see `android/LICENSE` and `android/NOTICE`, which records that parts of the app are derived from modified Apache 2.0 and Android Open Source Project code.
