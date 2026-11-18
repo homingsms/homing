@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="assets/banner.png" alt="Homing: an Android phone, turned into your SMS gateway" width="100%">
+  <img src="assets/banner.png" alt="Homing, an Android SMS gateway and SMS API" width="100%">
 </p>
 
-Homing turns an Android phone into an SMS gateway you control. Install the app on a phone with a SIM, then send SMS and MMS through a simple HTTP API. Delivery reports and replies come back to you as signed webhooks.
+Homing turns an Android phone into an SMS gateway you control. Install the app on a phone with a SIM, then send SMS and MMS from your own number through a simple SMS API. Delivery reports and replies come back to you as signed webhooks.
 
 ## Get started
 
