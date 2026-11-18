@@ -6,7 +6,7 @@ Homing turns an Android phone into an SMS gateway you control. Install the app o
 
 ## Get started
 
-1. **Install the app.** Download the signed APK from the Android repository's releases and install it on the phone.
+1. **Install the app.** On the phone, [download the latest APK](https://homingsms.com/download/homing.apk) (version 1.0.0), open it and allow installs from your browser when Android asks.
 2. **Pick a mode.** Use **Local** to call the phone directly over your network, or **Cloud** to pair one or many phones with [Homing Cloud](https://homingsms.com) and manage them from the console.
 3. **Create an API key** in the app (Local) or the console (Cloud).
 4. **Send a message.**
@@ -28,7 +28,7 @@ It is not a bulk marketing tool. Message only people who agreed to hear from you
 
 ## Good to know
 
-- Homing is not on Google Play. You install the signed APK yourself.
+- Homing is not on Google Play. You install the signed APK yourself. Its SHA-256 checksum is `3e1a50e31ebc463f050dcbe45dc850ad92f5440723a4e7085b5b574137940fd8` ([checksum file](https://homingsms.com/download/homing.apk.sha256)).
 - Many phones stop background apps. Exempt Homing from battery optimization and keep the phone charging.
 - Android limits outgoing SMS, and carriers can block a SIM that sends too much. Pace your sends.
 
