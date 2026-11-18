@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="480" viewBox="0 0 1600 480">
+  <defs>
+    <radialGradient id="glow" cx="800" cy="-40" r="620" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#53BDC1" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#53BDC1" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="tile" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7FD0D3"/>
+      <stop offset="1" stop-color="#53BDC1"/>
+    </linearGradient>
+    <pattern id="dots" width="32" height="32" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#E8EDEA" fill-opacity="0.07"/>
+    </pattern>
+    <radialGradient id="fade" cx="800" cy="240" r="700" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <mask id="dotmask"><rect width="1600" height="480" fill="url(#fade)"/></mask>
+  </defs>
+  <rect width="1600" height="480" fill="#0C1110"/>
+  <rect width="1600" height="480" fill="url(#dots)" mask="url(#dotmask)"/>
+  <rect width="1600" height="480" fill="url(#glow)"/>
+  <g transform="translate(800 168)">
+    <rect x="-44" y="-44" width="88" height="88" rx="24" fill="url(#tile)"/>
+    <rect x="-44" y="-44" width="88" height="88" rx="24" fill="none" stroke="#fff" stroke-opacity="0.28" stroke-width="1" transform="scale(1)"/>
+    <rect x="-27.5" y="-27.5" width="12.4" height="55" rx="6.2" fill="#04201F"/>
+    <rect x="15.1" y="-27.5" width="12.4" height="55" rx="6.2" fill="#04201F"/>
+    <circle cx="0" cy="0" r="9.2" fill="#04201F"/>
+  </g>
+  <text x="800" y="288" text-anchor="middle" font-family="Aspekta Variable, Aspekta, sans-serif" font-size="76" font-weight="600" letter-spacing="-2.6" fill="#E8EDEA">Homing</text>
+  <text x="800" y="342" text-anchor="middle" font-family="Aspekta Variable, Aspekta, sans-serif" font-size="27" font-weight="400" letter-spacing="-0.2" fill="#94A19B">An Android phone, turned into your SMS gateway.</text>
+</svg>
